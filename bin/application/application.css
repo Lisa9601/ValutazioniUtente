@@ -1,0 +1,45 @@
+
+#anchor {
+	-fx-background-color: #fefeff;
+}
+
+#head {
+	-fx-background-color: #546ba9;
+	
+	}
+	
+#text{
+	-fx-color: #343658;
+	}
+
+#filterBox{
+	-fx-border-color: #8887b6;
+	-fx-border-width: 1px;
+	-fx-border-radius: 5px;
+
+}
+
+#button{
+	-fx-background-color: #343658;
+	-fx-text-fill: #fefeff;
+}
+
+#ratingTot{
+	-fx-background-color: #343658;	
+}
+
+#progressDark{
+	-fx-accent: #353659;
+}
+
+#progressMedium{
+	-fx-accent: #6265A6;
+}
+
+#progressLight{
+	-fx-accent: #878CE6;
+}
+
+
+
+

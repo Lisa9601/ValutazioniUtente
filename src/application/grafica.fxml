@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <GridPane id="grid" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="779.0" prefWidth="1000.0" stylesheets="@application.css" AnchorPane.bottomAnchor="-29.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="1000.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="200.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="-Infinity" prefHeight="550.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="193.0" prefWidth="994.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="156.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="220.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="350.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="-Infinity" prefHeight="190.0" vgrow="SOMETIMES" />
+                  <RowConstraints />
+              </rowConstraints>
+               <children>
+                  <ImageView id="user" fitHeight="120.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                     <GridPane.margin>
+                        <Insets bottom="30.0" left="15.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@immagini/utente.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="username" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="text" textAlignment="CENTER" wrappingWidth="156.0" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text id="text" fx:id="descrizione" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="text" textAlignment="LEFT" wrappingWidth="249.0" GridPane.columnIndex="1" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+                     <GridPane.margin>
+                        <Insets left="25.0" top="40.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulizia" wrappingWidth="90.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="Disponibilità" wrappingWidth="90.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets top="80.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="Educazione" wrappingWidth="90.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="40.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text id="ratingTot" fx:id="textRatingTot" fill="#353659" text="text" textAlignment="CENTER" wrappingWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="36.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Text>
+                  <ProgressBar id="progressDark" fx:id="ratingPul" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" progress="0.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="100.0" top="20.0" />
+                     </GridPane.margin>
+                  </ProgressBar>
+                  <ProgressBar id="progressMedium" fx:id="ratingDisp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" progress="0.0" GridPane.columnIndex="3" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="100.0" />
+                     </GridPane.margin>
+                  </ProgressBar>
+                  <ProgressBar id="progressLight" fx:id="ratingEdu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0" progress="0.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="40.0" left="100.0" />
+                     </GridPane.margin>
+                  </ProgressBar>
+                  <Text id="text" fx:id="pul" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="100.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="150.0" top="45.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text id="text" fx:id="disp" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="100.0" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="150.0" top="25.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text id="text" fx:id="edu" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="100.0" GridPane.columnIndex="3" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="150.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text id="ratingTot" fill="#353659" text="Punteggio " textAlignment="CENTER" wrappingWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="Arial" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets top="30.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@immagini/occhio.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets top="130.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Line endX="100.0" startX="99.92892456054688" startY="-199.35780334472656" stroke="#353659" GridPane.columnIndex="2" />
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@immagini/sesso.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets top="40.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@immagini/mondo.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets top="60.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@immagini/torta.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets top="80.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@immagini/iscrizione.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets top="97.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane id="head" prefHeight="43.0" prefWidth="1010.0" stylesheets="@application.css" GridPane.columnSpan="2147483647">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="16.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text id="text" fill="#fefeff" onMouseClicked="#goToUserList" strokeType="OUTSIDE" strokeWidth="0.0" text="FERSA" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="40.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold Italic" size="10.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="icon" fitHeight="27.0" fitWidth="30.0" onMouseClicked="#goToUserList" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="5.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@immagini/icon.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="574.0" prefWidth="1000.0" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints minWidth="-Infinity" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints percentHeight="0.0" prefHeight="600.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane id="filterBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="199.0" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647" GridPane.valignment="TOP">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="219.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="249.0" minHeight="0.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="261.0" minHeight="0.0" prefHeight="180.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="categoriaD" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Disponibilità" textFill="#343658" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="30.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="categoriaE" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Educazione" textFill="#343658" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="55.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <Text boundsType="VISUAL" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" wrappingWidth="92.4632568359375" GridPane.halignment="CENTER" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text boundsType="VISUAL" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="Lingua" wrappingWidth="217.85026168823242" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text boundsType="VISUAL" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero di stelle" wrappingWidth="217.85026168823242" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text boundsType="VISUAL" fill="#343658" strokeType="OUTSIDE" strokeWidth="0.0" text="Periodo soggiorno" wrappingWidth="216.85026168823242" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <CheckBox fx:id="categoriaP" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Pulizia" textFill="#343658" GridPane.valignment="TOP">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets left="10.0" top="80.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="linguaIta" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Italiano" textFill="#343658" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="30.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="linguaIng" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Inglese " textFill="#343658" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="55.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="linguaFra" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Francese" textFill="#343658" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="80.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="periodoMM" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Marzo-Maggio" textFill="#343658" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="30.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="periodoGA" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Giugno-Agosto" textFill="#343658" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="55.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="periodoSN" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Settembre-Novembre" textFill="#343658" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="80.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="periodoDF" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="Dicembre-Febbraio" textFill="#343658" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="105.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="stelle1" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="1" textFill="#343658" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="30.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="stelle2" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="2" textFill="#343658" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="55.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="stelle3" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="3" textFill="#343658" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="80.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="stelle4" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="4" textFill="#343658" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="30.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="stelle5" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#applicaFiltri" prefHeight="20.0" text="5" textFill="#343658" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="55.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                     </children>
+                  </GridPane>
+                  <GridPane minHeight="0.0" minWidth="0.0" prefHeight="544.0" prefWidth="788.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="800.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ListView id="list" fx:id="evaluationList" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="450.0" prefWidth="800.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" GridPane.valignment="TOP" />
+                        <Text fx:id="error" fill="#686983" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="716.0068359375" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Text>
+                        <ComboBox id="combo" fx:id="ordinamento" maxHeight="-Infinity" maxWidth="1500.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#ordina" prefHeight="30.0" prefWidth="800.0" promptText="Ordina per" stylesheets="@application.css" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </ComboBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
